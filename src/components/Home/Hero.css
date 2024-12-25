@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .main video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire screen */
+  }
+  
+  .main .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1;
+  }
+  
+  .content {
+    position: relative;
+    z-index: 2; /* Ensures the content is above the video */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    color: white;
+  }
+  
+  .content h1 {
+    font-size: 64px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .content p {
+    font-size: 24px;
+    max-width: 600px;
+    line-height: 1.5;
+  }
+  
+  form {
+    display: flex; /* Ensure items are arranged horizontally */
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 0px;
+    padding: 10px 20px;
+    margin-top: 50px;
+    gap: 10px; /* Add space between the form elements */
+  }
+  
+  form .box {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+  
+  form .box span {
+    font-size: 14px;
+    color: grey;
+    margin-bottom: 5px; /* Add spacing between label and input */
+  }
+  
+  form input {
+    padding: 10px;
+    width: 200px; /* Adjust width to keep items aligned */
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    border-radius: 5px;
+  }
+  
+  form input::placeholder {
+    color: black; /* Placeholder color */
+  }
+  
+  form button {
+    background-color: rgb(90, 153, 119);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  form button i {
+    margin-right: 5px; /* Add spacing between icon and text */
+  }
+  
+  form .box:last-child {
+    margin-left: auto; /* Push the filter button to the right */
+  }
+  
+  @media screen and (max-width: 800px) {
+    form {
+      flex-wrap: wrap; /* Stack items vertically on smaller screens */
+      gap: 15px;
+    }
+  
+    form .box {
+      width: 100%; /* Make each form element take full width */
+    }
+  
+    form input {
+      width: 100%;
+    }
+  
+    form button {
+      width: 100%; /* Make the button full width */
+    }
+  }
+  
