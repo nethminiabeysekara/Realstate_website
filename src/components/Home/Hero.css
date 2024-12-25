@@ -75,7 +75,7 @@
   
   form .box span {
     font-size: 14px;
-    color: grey;
+    color: rgb(49, 49, 49);
     margin-bottom: 5px; /* Add spacing between label and input */
   }
   
@@ -87,7 +87,7 @@
   }
   
   form input::placeholder {
-    color: black; /* Placeholder color */
+    color: rgb(135, 135, 135); /* Placeholder color */
   }
   
   form button {
